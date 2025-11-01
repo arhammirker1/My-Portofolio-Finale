@@ -10,7 +10,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Arham Mirker - Portfolio",
   description: "Futuristic portfolio website with glassmorphism design",
-  generator: "v0.app",
+  generator: "Arham Mirker",
 }
 
 export default function RootLayout({
