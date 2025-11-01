@@ -143,9 +143,9 @@ void main() {
   }
 
   // Fog
-  col = mix(col, vec3(1.0),
+  col = mix(col, vec3(0.0, 0.0, 0.05),
             smoothstep(0.0, u_maxDist * 0.7, dist));
-  col = vec3(1.0) - col;
+
   fragColor = vec4(col, 1.0);
 }
 `
