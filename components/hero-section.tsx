@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section className="w-full min-h-screen flex items-center justify-center overflow-hidden relative">
       <div className="absolute inset-0 w-full h-full">
-        <NeonCrystalCity cameraSpeed={3} tileSize={2.5} maxSteps={80} ariaLabel="Neon crystal city background" />
+        <NeonCrystalCity cameraSpeed={1} tileSize={2} maxSteps={100} ariaLabel="Neon crystal city shader background" />
       </div>
 
       {/* Main content - centered with plenty of whitespace */}
