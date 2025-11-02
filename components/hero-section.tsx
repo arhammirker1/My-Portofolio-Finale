@@ -12,15 +12,13 @@ export function HeroSection() {
       {/* Main content - centered with plenty of whitespace */}
       <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8 p-4">
         <div className="space-y-4">
-          <p className="text-base sm:text-lg text-white/60 font-medium tracking-wide">Welcome to my portfolio</p>
+          <p className="text-base sm:text-lg text-white/60 font-medium tracking-wide">Hi, I’m Arham — builder of systems that think, automate, and perform</p>
 
           {/* Main typewriter heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-normal text-balance leading-tight text-white">
-            <span className="text-white">We're born </span>
-            <span className="text-yellow-300">🌞</span>
-            <span className="text-white"> to </span>
+            <span className="text-white">I create </span> 
             <Typewriter
-              text={["experience", "dance", "love", "be alive", "create things that make the world a better place"]}
+              text={["AI-driven platforms", "data-driven marketing tools", "web experiences that perform", "automation systems", "products that scale and inspire"]}
               speed={70}
               className="text-yellow-400 font-normal"
               waitTime={1500}

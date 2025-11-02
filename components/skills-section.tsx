@@ -3,38 +3,38 @@
 import { useEffect, useRef, useState } from "react"
 import { GlowingEffect } from "@/components/ui/glowing-effect"
 import { ParticleButton } from "@/components/ui/particle-button"
-import { Code2, Palette, Zap, Database, Smartphone, Cloud } from "lucide-react"
+import { Code2, Palette, Zap, Database, Smartphone, Cloud, Cpu, Globe, Rocket, LineChart } from "lucide-react"
 
 const skills = [
   {
-    icon: Code2,
-    title: "Frontend Development",
-    description: "React, Next.js, TypeScript, Tailwind CSS, and modern web technologies",
-  },
-  {
-    icon: Palette,
-    title: "UI/UX Design",
-    description: "Figma, prototyping, design systems, and interactive experiences",
-  },
-  {
-    icon: Zap,
-    title: "Performance",
-    description: "Optimization, lazy loading, code splitting, and Web Vitals",
+    icon: Cpu,
+    title: "Automation & AI Systems",
+    description: "Building intelligent systems using Python, Playwright, and AI logic — automating tasks, parsing data, and deploying scalable backend scripts.",
   },
   {
     icon: Database,
-    title: "Backend & Databases",
-    description: "Node.js, PostgreSQL, MongoDB, and API development",
+    title: "Backend & Data Engineering",
+    description: "Experienced with PostgreSQL, Prisma, REST APIs, and data modeling. Skilled in structuring and optimizing databases for analytics and performance.",
   },
   {
-    icon: Smartphone,
-    title: "Mobile Development",
-    description: "React Native, cross-platform apps, and responsive design",
+    icon: Globe,
+    title: "Full-Stack Web Development",
+    description: "Developing responsive, high-performance websites and web apps using React, Next.js, TypeScript, and Tailwind CSS — optimized for SEO and scalability.",
   },
   {
-    icon: Cloud,
-    title: "DevOps & Cloud",
-    description: "AWS, Vercel, Docker, CI/CD pipelines, and deployment",
+    icon: Rocket,
+    title: "Performance Optimization",
+    description: "Reducing load times and GPU stress for WebGL/3D sites through code splitting, lazy loading, and real-time shader optimization for smooth visuals.",
+  },
+  {
+    icon: LineChart,
+    title: "Data-Driven Marketing",
+    description: "Implementing marketing automation and analytics systems using WebEngage, tracking KPIs, and improving conversion through segmentation and A/B testing.",
+  },
+  {
+    icon: Zap,
+    title: "DevOps & Deployment",
+    description: "Deploying and maintaining production apps with Vercel, Docker, and CI/CD pipelines. Experienced with performance monitoring and cloud automation.",
   },
 ]
 
@@ -68,7 +68,7 @@ export function SkillsSection() {
             Skills & Expertise
           </h2>
           <p className="text-lg text-white/70 mb-16 max-w-2xl mx-auto text-center">
-            A diverse toolkit of technologies and capabilities to bring your vision to life
+            A blend of engineering, AI, and marketing — building systems that automate, analyze, and scale.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -95,7 +95,7 @@ export function SkillsSection() {
                     </div>
                     <div className="flex justify-end pt-4">
                       <ParticleButton variant="outline" size="sm" className="hover:bg-black">
-                        Demo
+                        View Realted Projects
                       </ParticleButton>
                     </div>
                   </div>

@@ -7,19 +7,17 @@ export function AboutSection() {
   const [revealedWordCount, setRevealedWordCount] = useState(0)
 
   const storySegments = [
-    "So there I was, 3 AM on a Tuesday, debugging code that I swore worked perfectly just six hours ago.",
-    "My client had just sent their fourth 'quick question' of the night.",
-    "The coffee machine broke at midnight. This was not ideal.",
-    "I realized I'd been wearing the same hoodie for three days straight. My cat had stopped judging me. That's when I knew things were serious.",
-    "The client wanted 'just a small change' to the entire backend architecture. No big deal, right?",
-    "I quoted them two weeks. They needed it by Friday. It was already Wednesday.",
-    "My inbox had 47 unread messages. 43 of them started with 'Hey, quick question...'",
-    "I discovered I'd been on mute during the entire client call. For 45 minutes, I'd been passionately explaining solutions to absolutely no one.",
-    "The 'final' revision was revision number 23. The optimist in me died somewhere around revision 11.",
-    "But you know what? I shipped it. On time. It actually worked.",
-    "The client loved it. Five stars. Would definitely send more 'quick questions' at 3 AM again.",
-    "This is the life. This is freelancing. This is why I'll never go back to a regular job.",
-    "At least my cat respects me again.",
+    "It started with curiosity — a single line of code that somehow crashed my entire laptop.",
+    "Instead of quitting, I wanted to know *why* it crashed. That’s where it began.",
+    "I started building small things — calculators, landing pages, scripts that scraped data just because I could.",
+    "Then came my first real project: RAAVC, an AI-powered real estate valuation system for a Saudi client.",
+    "It wasn’t just code — it was data cleaning, fuzzy matching Arabic entries, and generating multilingual PDFs.",
+    "I learned PostgreSQL, APIs, and optimization the hard way — through every crash log imaginable.",
+    "Later, I joined Orange Fox — where I used data to make marketing smarter, not just louder.",
+    "From automation to analytics dashboards, every project became a way to understand how systems — and people — work.",
+    "I realized I don’t just build systems or websites. I build clarity. I make data tell a story.",
+    "That’s the magic I chase every day — blending design, logic, and strategy to make something truly useful.",
+    "And this? This is just the beginning.",   
   ]
 
   const allWords = storySegments.flatMap((segment) => segment.split(" "))
@@ -134,7 +132,7 @@ export function AboutSection() {
               fontWeight: 600,
             }}
           >
-            The End
+            The End of Booring Story 🥲
           </p>
         </div>
       </div>
