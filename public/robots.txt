@@ -1,9 +1,0 @@
-# Allow all user agents
-User-agent: *
-Allow: /
-
-# Sitemap location
-Sitemap: https://my-portofolio-finale.vercel.app/sitemap.xml
-
-# Crawl-delay (optional, helps with rate limiting)
-Crawl-delay: 1
