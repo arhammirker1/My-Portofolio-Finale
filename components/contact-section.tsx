@@ -1,12 +1,14 @@
 "use client"
 
 import type React from "react"
-
 import { useEffect, useRef, useState } from "react"
+import { FancyLoader } from "@/components/ui/fancy-loader"
+
 
 export function ContactSection() {
   const [isVisible, setIsVisible] = useState(false)
   const [formData, setFormData] = useState({ name: "", email: "", message: "" })
+  const [isLoading, setIsLoading] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
@@ -25,12 +27,29 @@ export function ContactSection() {
     return () => observer.disconnect()
   }, [])
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitted(true)
-    setFormData({ name: "", email: "", message: "" })
-    setTimeout(() => setIsSubmitted(false), 3000)
-  }
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsLoading(true);
+
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwfioR4LRK4zSm1p4L432PK25kDw8XKqx4L-4kUNXnx9BWb_NT_Y4EQfG7gckLr7S9j/exec";
+
+  const formDataToSend = new FormData();
+  formDataToSend.append("name", formData.name);
+  formDataToSend.append("email", formData.email);
+  formDataToSend.append("message", formData.message);
+
+  try {
+    await fetch(scriptURL, { method: "POST", body: formDataToSend });
+    setIsSubmitted(true);
+    setFormData({ name: "", email: "", message: "" });
+    setTimeout(() => setIsSubmitted(false), 3000);
+  } catch (error) {
+    console.error("Error submitting form:", error);
+  } finally {
+    setIsLoading(false);
+  } 
+};
+
 
   return (
     <section id="contact" className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -57,48 +76,59 @@ export function ContactSection() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-white">Name</label>
-                    <input
-                      type="text"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/30 text-white placeholder-white/40 focus:border-yellow-400 focus:outline-none transition-colors"
-                      placeholder="Your name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2 text-white">Email</label>
-                    <input
-                      type="email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/30 text-white placeholder-white/40 focus:border-yellow-400 focus:outline-none transition-colors"
-                      placeholder="your@email.com"
-                      required
-                    />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium mb-2 text-white">Message</label>
-                  <textarea
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/30 text-white placeholder-white/40 focus:border-yellow-400 focus:outline-none transition-colors resize-none"
-                    placeholder="Tell me about your project..."
-                    rows={5}
-                    required
-                  ></textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full py-3 px-6 font-semibold rounded-lg bg-yellow-400 text-black hover:bg-yellow-300 transition-all"
-                >
-                  Send Message
-                </button>
-              </form>
+  {isLoading ? (
+    <div className="flex flex-col items-center justify-center py-12 space-y-4">
+      <FancyLoader />
+      <p className="text-white/70 text-lg font-medium animate-pulse">Sending...</p>
+    </div>
+  ) : (
+    <>
+      <div className="grid md:grid-cols-2 gap-6">
+        <div>
+          <label className="block text-sm font-medium mb-2 text-white">Name</label>
+          <input
+            type="text"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/30 text-white placeholder-white/40 focus:border-yellow-400 focus:outline-none transition-colors"
+            placeholder="Your name"
+            required
+          />
+        </div>
+        <div>
+          <label className="block text-sm font-medium mb-2 text-white">Email</label>
+          <input
+            type="email"
+            value={formData.email}
+            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/30 text-white placeholder-white/40 focus:border-yellow-400 focus:outline-none transition-colors"
+            placeholder="your@email.com"
+            required
+          />
+        </div>
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium mb-2 text-white">Message</label>
+        <textarea
+          value={formData.message}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+          className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/30 text-white placeholder-white/40 focus:border-yellow-400 focus:outline-none transition-colors resize-none"
+          placeholder="Tell me about your project..."
+          rows={5}
+          required
+        ></textarea>
+      </div>
+
+      <button
+        type="submit"
+        className="w-full py-3 px-6 font-semibold rounded-lg bg-yellow-400 text-black hover:bg-yellow-300 transition-all"
+      >
+        Send Message
+      </button>
+    </>
+  )}
+</form>
             )}
 
             <div className="mt-12 pt-12 border-t border-white/20 grid md:grid-cols-3 gap-8">
