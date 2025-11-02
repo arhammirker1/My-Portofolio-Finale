@@ -14,7 +14,7 @@ export function SEO({
   description,
   url,
   image = "/og-image.png",
-  author = "Arham Mirker",
+  author = "Arham Mirkar",
   type = "website",
 }: SEOProps): React.ReactElement {
   return (

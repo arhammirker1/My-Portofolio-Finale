@@ -65,7 +65,7 @@ export function Navigation() {
           <DockLabel>GitHub</DockLabel>
           <DockIcon>
             <a
-              href="#"
+              href="https://github.com/arhammirker1"
               className="flex items-center justify-center w-full h-full text-white hover:text-yellow-400 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
@@ -80,7 +80,7 @@ export function Navigation() {
           <DockLabel>LinkedIn</DockLabel>
           <DockIcon>
             <a
-              href="#"
+              href="https://www.linkedin.com/in/arham-mirkar/"
               className="flex items-center justify-center w-full h-full text-white hover:text-yellow-400 transition-colors"
               target="_blank"
               rel="noopener noreferrer"

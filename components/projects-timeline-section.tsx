@@ -62,7 +62,7 @@ export function ProjectsTimelineSection() {
     },
     {
       id: 6,
-      title: "Amazon Automation Bot",
+      title: "Amazon Scraper Automation",
       date: "2023-03",
       content: "Engineered a Playwright-based automation script that searches Amazon, bypasses CAPTCHAs, and uses fuzzy logic to match products. Integrated results directly into Google Sheets via Sheets API.",
       category: "Automation",
@@ -74,8 +74,10 @@ export function ProjectsTimelineSection() {
   ]
 
   return (
+    <section id ="projects">
     <ContainerScroll titleComponent={<h2 className="text-4xl md:text-5xl font-bold text-white mb-8">My Work</h2>}>
       <RadialOrbitalTimeline timelineData={timelineData} />
     </ContainerScroll>
+    </section>
   )
 }

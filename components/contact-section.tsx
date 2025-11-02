@@ -104,20 +104,20 @@ export function ContactSection() {
             <div className="mt-12 pt-12 border-t border-white/20 grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-sm text-white/60 mb-2">Email</div>
-                <a href="mailto:arham@example.com" className="font-semibold text-yellow-400 hover:text-yellow-300">
-                  arham@example.com
+                <a href="mailto:arhammirker1@gmail.com" className="font-semibold text-yellow-400 hover:text-yellow-300">
+                  arhammirker1@gmail.com
                 </a>
               </div>
               <div className="text-center">
                 <div className="text-sm text-white/60 mb-2">LinkedIn</div>
-                <a href="#" className="font-semibold text-yellow-400 hover:text-yellow-300">
-                  linkedin.com/in/arham
+                <a href="https://www.linkedin.com/in/arham-mirkar/" className="font-semibold text-yellow-400 hover:text-yellow-300">
+                  linkedin.com/in/arham-mirkar
                 </a>
               </div>
               <div className="text-center">
                 <div className="text-sm text-white/60 mb-2">GitHub</div>
-                <a href="#" className="font-semibold text-yellow-400 hover:text-yellow-300">
-                  github.com/arham
+                <a href="https://github.com/arhammirker1" className="font-semibold text-yellow-400 hover:text-yellow-300">
+                  github.com/arham-mirker
                 </a>
               </div>
             </div>

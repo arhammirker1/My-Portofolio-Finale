@@ -28,12 +28,12 @@ export function Footer() {
             <h4 className="font-semibold mb-4 text-white">Connect</h4>
             <ul className="space-y-2 text-sm text-white/70">
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors">
+                <a href="https://github.com/arhammirker1" className="hover:text-yellow-400 transition-colors">
                   GitHub
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-yellow-400 transition-colors">
+                <a href="https://www.linkedin.com/in/arham-mirkar/" className="hover:text-yellow-400 transition-colors">
                   LinkedIn
                 </a>
               </li>
@@ -61,7 +61,7 @@ export function Footer() {
           </div>
         </div>
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-white/70">&copy; 2025 Arham Mirker. All rights reserved.</p>
+          <p className="text-sm text-white/70">&copy; 2025 Arham Mirkar. All rights reserved.</p>
           <div className="flex gap-4 mt-4 md:mt-0">
             <a href="#" className="text-sm text-white/70 hover:text-yellow-400 transition-colors">
               Privacy Policy
