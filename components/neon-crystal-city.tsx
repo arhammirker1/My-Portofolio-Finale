@@ -151,7 +151,7 @@ void main() {
 `
 
 const NeonCrystalCity: FC<NeonCrystalCityProps> = ({
-  cameraSpeed = 5,
+  cameraSpeed = 3,
   tileSize = 2,
   unionK = 0.5,
   maxSteps = 100,
