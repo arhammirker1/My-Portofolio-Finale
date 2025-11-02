@@ -10,31 +10,37 @@ const skills = [
     icon: Cpu,
     title: "Automation & AI Systems",
     description: "Building intelligent systems using Python, Playwright, and AI logic — automating tasks, parsing data, and deploying scalable backend scripts.",
+    link: "https://www.raavc.com/",
   },
   {
     icon: Database,
     title: "Backend & Data Engineering",
     description: "Experienced with PostgreSQL, Prisma, REST APIs, and data modeling. Skilled in structuring and optimizing databases for analytics and performance.",
+    link: "https://www.raavc.com/",
   },
   {
     icon: Globe,
     title: "Full-Stack Web Development",
     description: "Developing responsive, high-performance websites and web apps using React, Next.js, TypeScript, and Tailwind CSS — optimized for SEO and scalability.",
+    link: "/projects#automation",
   },
   {
     icon: Rocket,
     title: "Performance Optimization",
     description: "Reducing load times and GPU stress for WebGL/3D sites through code splitting, lazy loading, and real-time shader optimization for smooth visuals.",
+    link: "/projects#automation",
   },
   {
     icon: LineChart,
     title: "Data-Driven Marketing",
     description: "Implementing marketing automation and analytics systems using WebEngage, tracking KPIs, and improving conversion through segmentation and A/B testing.",
+    link: "https://orangefox.io/",   
   },
   {
     icon: Zap,
     title: "DevOps & Deployment",
     description: "Deploying and maintaining production apps with Vercel, Docker, and CI/CD pipelines. Experienced with performance monitoring and cloud automation.",
+    link: "/projects#automation",
   },
 ]
 
@@ -95,7 +101,7 @@ export function SkillsSection() {
                     </div>
                     <div className="flex justify-end pt-4">
                       <ParticleButton variant="outline" size="sm" className="hover:bg-black">
-                        View Realted Projects
+                        <a href={skill.link}>View Related Projects</a>
                       </ParticleButton>
                     </div>
                   </div>
