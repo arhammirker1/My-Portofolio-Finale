@@ -161,6 +161,33 @@
     }
   }
 
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes orbit {
+    from {
+      transform: rotate(0deg) translateX(192px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(192px) rotate(-360deg);
+    }
+  }
+
+  @keyframes orbitParticle {
+    from {
+      transform: rotate(0deg) translateX(192px) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translateX(192px) rotate(-360deg);
+    }
+  }
+
   .glassmorphic {
     @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl;
   }

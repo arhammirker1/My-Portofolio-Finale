@@ -22,11 +22,6 @@ export function Footer() {
                   Projects
                 </a>
               </li>
-              <li>
-                <a href="#services" className="hover:text-yellow-400 transition-colors">
-                  Services
-                </a>
-              </li>
             </ul>
           </div>
           <div>
