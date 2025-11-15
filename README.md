@@ -2,7 +2,7 @@
 
 A modern, futuristic portfolio website showcasing AI-powered projects, full-stack development work, and data-driven systems. Built with Next.js 15, React, TypeScript, and featuring stunning 3D WebGL effects.
 
-![Portfolio Preview](https://my-portofolio-finale.vercel.app/)
+https://my-portofolio-finale.vercel.app/
 
 ## 🚀 Features
 
